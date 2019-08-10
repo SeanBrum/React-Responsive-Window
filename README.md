@@ -1,7 +1,7 @@
 # react-responsive-window
-React component that provides globaly accessable window breakpoint information.
+React component that provides globally accessible window breakpoint information.
 
-This componet can be wrapped around all or just specific react components giving all child componets access to the responsive context. This context includes boolean breakpoints that are set via the window resize event both when the window first loads and everytime the window resize event is triggered. This is perfect if you would like to set so global window size breakpoints and access them conditionally relative to the window size anywhere in your app.
+This component can be wrapped around all or just specific react components giving all child components access to the responsive context. This context includes Boolean breakpoints that are set via the window resize event both when the window first loads and every time the window resize event is triggered. This is perfect if you would like to set so global window size breakpoints and access them conditionally relative to the window size anywhere in your app.
 
 The are 10 default breakpoints:
 
@@ -19,9 +19,9 @@ mobileSm: 400
 
 ```
 
-Everytime the window resize event is called, the componet updates state variables tied to the context by comparing the window size to each break point (breakpoints can be overridden via props). The window resize event is also 'debounced' with an adjustable delay.
+Every time the window resize event is called, the component updates state variables tied to the context by comparing the window size to each break point (breakpoints can be overridden via props). The window resize event is also 'debounced' with an adjustable delay.
 
-For example if the window size is 1250 the variables accessable via the context would be
+For example if the window size is 1250 the variables accessible via the context would be:
 
 ```
 desktopLg: true
@@ -46,14 +46,7 @@ yarn add react-responsive-window
 
 ## Usage
 
-Global usage
-Class usage - tablet example
-component switch usage
-
-Overides - show overides
-Debug and debounce
-
-This component is super easy to use. To inlcude just import the component from the package and wrap around the components that require access to the responsive context.
+This component is super easy to use. To include just import the component from the package and wrap around the components that require access to the responsive context.
 
 ```jsx
 import React from 'react';
@@ -73,7 +66,7 @@ export default App;
 
 ## Using responsive context in child components
 
-Just 2 lines of code are required to give a child componet access to the responsive context.
+Just 2 lines of code are required to give a child component access to the responsive context.
 
 ```jsx
 import {ResponsiveContext} from 'react-responsive-window';
@@ -87,7 +80,7 @@ const [responsiveObj] = useContext(ResponsiveContext);
 
 ```
 
-In the following example the above lines have been added and the mobile medium breakpoint has been referneced in a conditional that sets the class of the div. If the window size is less than the mobile medium break point, responsiveObj.mobileMd will update causing a state update that changes the class of the div element.
+In the following example the above lines have been added and the mobile medium breakpoint has been referenced in a conditional that sets the class of the div. If the window size is less than the mobile medium break point, responsiveObj.mobileMd will update causing a state update that changes the class of the div element.
 
 ```jsx
 import React from 'react'
@@ -130,7 +123,7 @@ export default function SomeComponent() {
 
 ## Overriding breakpoint
 
-Breakpoints are set by default to the values shown in the introduction. These breakpoints can be overridden by inlcuded values in the component props. In the example below you can see how the breakpoints for desktop and mobile have all been increased by 1.
+Breakpoints are set by default to the values shown in the introduction. These breakpoints can be overridden by included values in the component props. In the example below you can see how the breakpoints for desktop and mobile have all been increased by 1.
 
 ```jsx 
 import React from 'react';
@@ -159,7 +152,7 @@ export default App;
 
 ## Setting debounce and using state update indicator
 
-The default debounce delay set to the window resize event listener call back is 20ms. This can be overided in the props of the component.
+The default debounce delay set to the window resize event listener call back is 20ms. This can be overridden in the props of the component.
 
 ```jsx
 function App() {
@@ -172,7 +165,7 @@ function App() {
   );
 }
 ```
-Additionally, it is sometimes usefull to keep track of state updates and visually access how the debounce is impacting the application as the window size is adjusted. You can toggle devMode in the props to console.log the a state update counter every time the event listener callback is executed. 
+Additionally, it is sometimes useful to keep track of state updates and visually access how the debounce is impacting the application as the window size is adjusted. You can toggle devMode in the props to console.log the a state update counter every time the event listener call-back is executed. 
 
 ```jsx
 function App() {

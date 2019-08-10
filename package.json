@@ -1,0 +1,30 @@
+{
+    "name": "react-responsive-window",
+    "version": "0.0.1",
+    "description": "React Component for managing screen breakpoints using the window resize event and context api.",
+    "main": "./lib/index.js",
+    "repository": "https://github.com/SeanBrum/React-Responsive-Window.git",
+    "author": "Sean Gynane",
+    "license": "MIT",
+    "scripts": {
+        "build": "webpack"
+    },
+    "peerDependencies": {
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "lodash": "^4.17.11"
+    },
+    "devDependencies": {
+        "babel-core": "^6.21.0",
+        "babel-loader": "^7.1.4",
+        "babel-preset-env": "^1.6.1",
+        "babel-preset-react": "^6.16.0",
+        "babel-preset-stage-0": "^6.24.1",
+        "path": "^0.12.7",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "lodash": "^4.17.11",
+        "webpack": "^4.29.6",
+        "webpack-cli": "^3.2.1"
+    }
+}

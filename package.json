@@ -1,6 +1,6 @@
 {
   "name": "react-responsive-window",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "React Component for managing screen breakpoints using the window resize event and context api.",
   "main": "./build/index.js",
   "repository": {

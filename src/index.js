@@ -82,36 +82,36 @@ export default function Responsive(props) {
         let mobileMd = false;
         let mobileSm = false;
 
-        //Perhaps a more elegant way around this arrow e.g a state machine?
-        if(window.innerWidth < breakpoints.desktopLg){
+        //Perhaps a more elegant way around this e.g a state machine?
+        if(window.innerWidth < (props.desktopLg ? props.desktopLg : breakpoints.desktopLg)){
             desktopLg = true;
-            if(window.innerWidth < breakpoints.desktopMd){
-                desktopMd = true;
-                if(window.innerWidth < breakpoints.desktopSm){
-                    desktopSm = true;
-                    if(window.innerWidth < breakpoints.tabletLg){
-                        tabletLg = true;
-                        if(window.innerWidth < breakpoints.tabletMd){
-                            tabletMd = true;
-                            if(window.innerWidth < breakpoints.tabletSm){
-                                tabletSm = true;
-                                if(window.innerWidth < breakpoints.mobileXl || window.innerHeight < (props.mobileHeight ? props.mobileHeight : 567)){
-                                    mobileXl = true;
-                                    if(window.innerWidth < breakpoints.mobileLg){
-                                        mobileLg = true;
-                                        if(window.innerWidth < breakpoints.mobileMd){
-                                            mobileMd = true;
-                                            if(window.innerWidth < breakpoints.mobileSm){
-                                                mobileSm = true;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+        }
+        if(window.innerWidth < (props.desktopMd ? props.desktopMd : breakpoints.desktopMd)){
+            desktopMd = true;
+        }
+        if(window.innerWidth < (props.desktopSm ? props.desktopSm : breakpoints.desktopSm)){
+            desktopSm = true;
+        }
+        if(window.innerWidth < (props.tabletLg ? props.tabletLg : breakpoints.tabletLg)){
+            tabletLg = true;
+        }
+        if(window.innerWidth < (props.tabletMd ? props.tabletMd : breakpoints.tabletMd)){
+            tabletMd = true;
+        }
+        if(window.innerWidth < (props.tabletSm ? props.tabletSm : breakpoints.tabletSm)){
+            tabletSm = true;
+        }
+        if(window.innerWidth < (props.mobileXl ? props.mobileXl : breakpoints.mobileXl) || window.innerHeight < (props.mobileHeight ? props.mobileHeight : 567)){
+            mobileXl = true;
+        }
+        if(window.innerWidth < (props.mobileLg ? props.mobileLg : breakpoints.mobileLg)){
+            mobileLg = true;
+        }
+        if(window.innerWidth < (props.mobileMd ? props.mobileMd : breakpoints.mobileMd)){
+            mobileMd = true;
+        }
+        if(window.innerWidth < (props.mobileSm ? props.mobileSm : breakpoints.mobileSm)){
+            mobileSm = true;
         }
 
         setWindowVars(desktopLg, desktopMd, desktopSm, tabletLg, tabletMd, tabletSm, mobileXl, mobileLg, mobileMd, mobileSm);

@@ -24,16 +24,16 @@ Everytime the window resize event is called, the componet updates state variable
 For example if the window size is 1250 the variables accessable via the context would be
 
 ```
-    desktopLg: true,
-    desktopMd: true,
-    desktopSm: false,
-    tabletLg: false,
-    tabletMd: false,
-    tabletSm: false,
-    mobileXl: false,
-    mobileLg: false,
-    mobileMd: false,
-    mobileSm: false
+desktopLg: true
+desktopMd: true
+desktopSm: false
+tabletLg: false
+tabletMd: false
+tabletSm: false
+mobileXl: false
+mobileLg: false
+mobileMd: false
+mobileSm: false
 ```
 
 ## Install
@@ -55,7 +55,7 @@ Debug and debounce
 
 This component is super easy to use. To inlcude just import the component from the package and wrap around the components that require access to the responsive context.
 
-```ts
+```jsx
 import React from 'react';
 import Responsive from 'react-responsive-window';
 import SomeComponent from './SomeComponent';
@@ -63,7 +63,7 @@ import SomeComponent from './SomeComponent';
 function App() {
   return (
     <Responsive>
-      <SomeComponent/>
+        <SomeComponent/>
     </Responsive>
   );
 }
@@ -75,13 +75,13 @@ export default App;
 
 Just 2 lines of code are required to give a child componet access to the responsive context.
 
-```ts
+```jsx
 import {ResponsiveContext} from 'react-responsive-window';
 ```
 
 &
 
-```ts
+```jsx
 
 const [responsiveObj] = useContext(ResponsiveContext);
 
@@ -89,7 +89,7 @@ const [responsiveObj] = useContext(ResponsiveContext);
 
 In the following example the above lines have been added and the mobile medium breakpoint has been referneced in a conditional that sets the class of the div. If the window size is less than the mobile medium break point, responsiveObj.mobileMd will update causing a state update that changes the class of the div element.
 
-```ts
+```jsx
 import React from 'react'
 import {ResponsiveContext} from 'react-responsive-window';
 
@@ -107,7 +107,7 @@ export default function SomeComponent() {
 
 or another example of how this may be used to switch in different componets dependant of the window size.
 
-```ts
+```jsx
 export default function SomeComponent() {
 
     const [responsiveObj] = useContext(ResponsiveContext);
@@ -132,7 +132,7 @@ export default function SomeComponent() {
 
 Breakpoints are set by default to the values shown in the introduction. These breakpoints can be overridden by inlcuded values in the component props. In the example below you can see how the breakpoints for desktop and mobile have all been increased by 1.
 
-```ts 
+```jsx 
 import React from 'react';
 import Responsive from 'react-responsive-window';
 import SomeComponent from './SomeComponent';
@@ -161,7 +161,7 @@ export default App;
 
 The default debounce delay set to the window resize event listener call back is 20ms. This can be overided in the props of the component.
 
-```ts
+```jsx
 function App() {
   return (
     <Responsive
@@ -174,7 +174,7 @@ function App() {
 ```
 Additionally, it is sometimes usefull to keep track of state updates and visually access how the debounce is impacting the application as the window size is adjusted. You can toggle devMode in the props to console.log the a state update counter every time the event listener callback is executed. 
 
-```ts
+```jsx
 function App() {
   return (
     <Responsive
@@ -206,16 +206,16 @@ devMode: Boolean - Default: false
 ## Responsive Context State Variables
 
 ```
-responsiveObj.desktopLg
-responsiveObj.desktopMd
-responsiveObj.desktopSm
-responsiveObj.tabletLg
-responsiveObj.tabletMd
-responsiveObj.tabletSm
-responsiveObj.mobileXl
-responsiveObj.mobileLg
-responsiveObj.mobileMd
-responsiveObj.mobileSm
+responsiveObj.desktopLg : Boolean
+responsiveObj.desktopMd : Boolean
+responsiveObj.desktopSm : Boolean
+responsiveObj.tabletLg : Boolean
+responsiveObj.tabletMd : Boolean
+responsiveObj.tabletSm : Boolean
+responsiveObj.mobileXl : Boolean
+responsiveObj.mobileLg : Boolean
+responsiveObj.mobileMd : Boolean
+responsiveObj.mobileSm : Boolean
 ```
 
 ## License 

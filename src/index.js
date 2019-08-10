@@ -33,7 +33,7 @@ export default function Responsive(props) {
     if (props.devMode) {
         //For counting renders in dev mode (useful for setting debounce)
         responsiveRenderCount++;
-        console.log('responsive render: ' + responsiveRenderCount);
+        console.log('responsive state update: ' + responsiveRenderCount);
     }
 
     const [responsiveObj, setResponsiveObj] = useState({
@@ -83,36 +83,19 @@ export default function Responsive(props) {
         let mobileSm = false;
 
         //Perhaps a more elegant way around this e.g a state machine?
-        if(window.innerWidth < (props.desktopLg ? props.desktopLg : breakpoints.desktopLg)){
-            desktopLg = true;
-        }
-        if(window.innerWidth < (props.desktopMd ? props.desktopMd : breakpoints.desktopMd)){
-            desktopMd = true;
-        }
-        if(window.innerWidth < (props.desktopSm ? props.desktopSm : breakpoints.desktopSm)){
-            desktopSm = true;
-        }
-        if(window.innerWidth < (props.tabletLg ? props.tabletLg : breakpoints.tabletLg)){
-            tabletLg = true;
-        }
-        if(window.innerWidth < (props.tabletMd ? props.tabletMd : breakpoints.tabletMd)){
-            tabletMd = true;
-        }
-        if(window.innerWidth < (props.tabletSm ? props.tabletSm : breakpoints.tabletSm)){
-            tabletSm = true;
-        }
-        if(window.innerWidth < (props.mobileXl ? props.mobileXl : breakpoints.mobileXl) || window.innerHeight < (props.mobileHeight ? props.mobileHeight : 567)){
-            mobileXl = true;
-        }
-        if(window.innerWidth < (props.mobileLg ? props.mobileLg : breakpoints.mobileLg)){
-            mobileLg = true;
-        }
-        if(window.innerWidth < (props.mobileMd ? props.mobileMd : breakpoints.mobileMd)){
-            mobileMd = true;
-        }
-        if(window.innerWidth < (props.mobileSm ? props.mobileSm : breakpoints.mobileSm)){
-            mobileSm = true;
-        }
+        if(window.innerWidth < (props.desktopLg ? props.desktopLg : breakpoints.desktopLg)) desktopLg = true;
+        if(window.innerWidth < (props.desktopMd ? props.desktopMd : breakpoints.desktopMd)) desktopMd = true;
+        if(window.innerWidth < (props.desktopSm ? props.desktopSm : breakpoints.desktopSm)) desktopSm = true;
+        if(window.innerWidth < (props.tabletLg ? props.tabletLg : breakpoints.tabletLg)) tabletLg = true;
+        if(window.innerWidth < (props.tabletMd ? props.tabletMd : breakpoints.tabletMd)) tabletMd = true;
+        if(window.innerWidth < (props.tabletSm ? props.tabletSm : breakpoints.tabletSm)) tabletSm = true;
+
+        if(window.innerWidth < (props.mobileXl ? props.mobileXl : breakpoints.mobileXl) 
+            || window.innerHeight < (props.mobileHeight ? props.mobileHeight : 567)) mobileXl = true;
+        
+        if(window.innerWidth < (props.mobileLg ? props.mobileLg : breakpoints.mobileLg)) mobileLg = true;
+        if(window.innerWidth < (props.mobileMd ? props.mobileMd : breakpoints.mobileMd)) mobileMd = true;
+        if(window.innerWidth < (props.mobileSm ? props.mobileSm : breakpoints.mobileSm)) mobileSm = true;
 
         setWindowVars(desktopLg, desktopMd, desktopSm, tabletLg, tabletMd, tabletSm, mobileXl, mobileLg, mobileMd, mobileSm);
     }
@@ -144,6 +127,7 @@ export default function Responsive(props) {
     )
 }
 
+//Default Breakpoints
 const breakpoints = {
     desktopLg: 1400,
     desktopMd: 1300,

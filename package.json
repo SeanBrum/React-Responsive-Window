@@ -1,6 +1,6 @@
 {
   "name": "react-responsive-window",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "React Component for managing screen breakpoints using the window resize event and context api.",
   "keywords": ["React", "Responsive", "Window Size", "resize", "breakpoints", "mobile", "tablet", "desktop", "resize event", "screen size", "context api", "react-responsive-window"],
   "main": "./build/index.js",

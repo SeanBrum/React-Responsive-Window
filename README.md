@@ -1,7 +1,7 @@
 # react-responsive-window
 React component that provides globally accessible window breakpoint information.
 
-This component can be wrapped around all or just specific react components giving all child components access to the responsive context. This context includes Boolean breakpoints that are set via the window resize event both when the window first loads and every time the window resize event is triggered. This is perfect if you would like to set so global window size breakpoints and access them conditionally relative to the window size anywhere in your app.
+This component can be wrapped around all or just specific react components giving all child components access to the responsive context. This context includes Boolean breakpoints that are set via the window resize event both when the window first loads and every time the window resize event is triggered. This is perfect if you would like to set global window size breakpoints and access them conditionally relative to the window size anywhere in your app.
 
 The are 10 default breakpoints:
 
@@ -121,7 +121,7 @@ export default function SomeComponent() {
 }
 ```
 
-## Overriding breakpoint
+## Overriding breakpoints
 
 Breakpoints are set by default to the values shown in the introduction. These breakpoints can be overridden by included values in the component props. In the example below you can see how the breakpoints for desktop and mobile have all been increased by 1.
 

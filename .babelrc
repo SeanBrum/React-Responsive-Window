@@ -1,6 +1,7 @@
 {
     "presets": ["@babel/preset-env"],
     "plugins": [
+        "lodash",
         "transform-object-rest-spread",
         "transform-react-jsx"
     ]

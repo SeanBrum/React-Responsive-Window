@@ -1,8 +1,21 @@
 {
   "name": "react-responsive-window",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "React Component for managing screen breakpoints using the window resize event and context api.",
-  "keywords": ["React", "Responsive", "Window Size", "resize", "breakpoints", "mobile", "tablet", "desktop", "resize event", "screen size", "context api", "react-responsive-window"],
+  "keywords": [
+    "React",
+    "Responsive",
+    "Window Size",
+    "resize",
+    "breakpoints",
+    "mobile",
+    "tablet",
+    "desktop",
+    "resize event",
+    "screen size",
+    "context api",
+    "react-responsive-window"
+  ],
   "main": "./build/index.js",
   "repository": {
     "type": "git",
@@ -28,10 +41,12 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.6",
+    "babel-plugin-lodash": "^3.3.4",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "lodash": "^4.17.11",
+    "lodash-webpack-plugin": "^0.11.5",
     "path": "^0.12.7",
     "react": "^16.8.6",
     "webpack-cli": "^3.3.6"
